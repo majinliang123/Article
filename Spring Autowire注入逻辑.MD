@@ -4,11 +4,11 @@
 
 接下来我们来看看Spring在使用Autowired注解时是如何选择bean的
 
-1. 找到所有类型相同的bean
+1. 找到所有类型符合的bean
 2. 如果只有一个，则使用这个bean用作依赖注入
 3. 如果有多个bean
 	
-	(1)选择其中带有Primary注解的bean，如果只有一个就直接返回，如果有多个bean带有Primary注解则报错，如果不存在就下一步
+	(1). 选择其中带有Primary注解的bean，如果只有一个就直接返回，如果有多个bean带有Primary注解则报错，如果不存在就下一步
 
 	(2). 选择其中优先级最高的bean(优先级使用javax.annotation.Priority表明)，如果只有一个就直接返回，如果有多个bean的优先级并列最高则报错，如果不存在就下一步
 
